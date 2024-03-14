@@ -64,8 +64,9 @@ encrypt_base64() {
 }
 
 sleep 1
+echo ""
 echo "Encryption-Shell-EstProject V1.0"
-sleep 2
+sleep 1
 echo ""
 echo "Choose encryption method:"
 echo "1. shc"
