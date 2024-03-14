@@ -121,7 +121,7 @@ encrypt_random_base64() {
 
 # Function for encrypting using random shc
 encrypt_random_shc() {
-    random_key=$(generate_random_string 100)
+    random_key=$(generate_random_string 2000)
     shc -f "$file_path" -o "$file_path.enc" -r "$random_key"
     echo "Encryption using random shc completed. Encrypted file: '$file_path.enc'"
 }
