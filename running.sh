@@ -26,6 +26,7 @@ check_file_existence() {
 
 # Function to confirm the file selection with the user
 confirm_file_selection() {
+    echo ""
     echo "You have selected the file: $file_path"
     read -p "Is this the correct file? (yes/no): " confirmation
     if [ "$confirmation" != "yes" ]; then
@@ -158,6 +159,7 @@ encrypt_base64_eval_base64() {
 }
 
 # Displaying the menu for selecting the encryption method
+echo ""
 echo "Choose encryption method:"
 echo "1. Encrypt using Base64"
 echo "2. Encrypt using shc"
