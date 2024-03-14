@@ -13,7 +13,7 @@ encrypt_shc() {
     exit 1
   fi
 
-  output="${input}.enc.sh"
+  output="${input}.shc"
 
   shc -r -f "$input" -o "$output"
 
@@ -34,7 +34,7 @@ encrypt_eval() {
     exit 1
   fi
 
-  output="${input}.enc.sh"
+  output="${input}.eval"
 
   eval "echo \"$(cat "$input")\"" > "$output"
 
@@ -55,7 +55,7 @@ encrypt_base64() {
     exit 1
   fi
 
-  output="${input}.enc.sh"
+  output="${input}.base64"
 
   base64 "$input" > "$output"
 
@@ -63,22 +63,27 @@ encrypt_base64() {
   echo "Encrypted file saved as: $output"
 }
 
-sleep 1
-echo ""
-echo "Encryption-Shell-EstProject V1.0"
-sleep 1
 echo ""
 echo "Choose encryption method:"
-echo "1. Encryption shc"
-echo "2. Encryption eval"
-echo "3. Encryption base64"
+echo "1. shc"
+echo "2. eval"
+echo "3. base64"
 echo ""
 
 read -p "Enter your choice (1/2/3): " choice
 
 case $choice in
-  1) encrypt_shc "$1" ;;
-  2) encrypt_eval "$1" ;;
-  3) encrypt_base64 "$1" ;;
+  1) method="shc" ;;
+  2) method="eval" ;;
+  3) method="base64" ;;
   *) echo "Invalid choice. Please select 1, 2, or 3." ;;
+esac
+
+read -p "Enter the file location: " file_location
+
+case $method in
+  shc) encrypt_shc "$file_location" ;;
+  eval) encrypt_eval "$file_location" ;;
+  base64) encrypt_base64 "$file_location" ;;
+  *) echo "Invalid encryption method." ;;
 esac
