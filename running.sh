@@ -13,6 +13,7 @@ error_exit() {
 
 # Function to prompt the user to select a file location
 select_file() {
+    echo ""
     echo "Please select the file location:"
     read  -p "Enter the file path: " file_path
 }
