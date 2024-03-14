@@ -1,5 +1,10 @@
 # Universal-Encryption-Shell
 
+# Fiture :
+encrypt shc
+encrypt Eval
+encrypt base64
+
 # How to install :
 step 1
 ``` sh
