@@ -68,10 +68,9 @@ echo "Choose encryption method:"
 echo "1. shc"
 echo "2. eval"
 echo "3. base64"
-echo ""
 
 read -p "Enter your choice (1/2/3): " choice
-
+echo ""
 case $choice in
   1) method="shc" ;;
   2) method="eval" ;;
