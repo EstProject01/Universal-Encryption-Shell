@@ -69,9 +69,9 @@ echo "Encryption-Shell-EstProject V1.0"
 sleep 1
 echo ""
 echo "Choose encryption method:"
-echo "1. shc"
-echo "2. eval"
-echo "3. base64"
+echo "1. Encryption shc"
+echo "2. Encryption eval"
+echo "3. Encryption base64"
 echo ""
 
 read -p "Enter your choice (1/2/3): " choice
