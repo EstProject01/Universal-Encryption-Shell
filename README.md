@@ -1,11 +1,17 @@
 # Universal-Encryption-Shell
 
 # Fiture :
-encrypt shc
+- encrypt shc
 
-encrypt Eval
+- encrypt Eval
 
-encrypt base64
+- encrypt base64
+
+- encrypt random base64
+
+- encrypt random eval
+
+- encrypt random shc
 
 # How to install :
 step 1
