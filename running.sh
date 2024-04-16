@@ -1,5 +1,6 @@
-sleep 2
-echo "'
-echo "lagi fix bug bang wet ya"
-echo ""
-echo "Gak lama ko paling sehari aja :) "
+#include <stdio.h>
+
+int main (){
+   printf ("wet ya lagi di beenrin jancyuuk ");
+   return 0;
+}
